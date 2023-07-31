@@ -1,0 +1,31 @@
+body{
+    background-image: url("hercules-hall-surrounded-by-greenery-sunlight-daytime-munich-germany.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login{
+    /*background-color: rgb(221, 205, 136);*/
+    max-width: fit-content; 
+    padding: 30px;
+}
+form{
+    margin-left: 85px;
+    margin-top: 250px;
+    position: relative;
+    z-index: 1;
+     /*background: rgb(197, 197, 171);*/
+    max-width: 360px;  
+    padding: 45px;
+    text-align: center;
+     /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
+
+}
+input{
+    border-radius: 30px;
+}
+button{
+    border-radius: 40px;
+    width: 30%;
+    color:black;
+    font:bold;
+}
