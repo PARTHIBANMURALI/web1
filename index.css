@@ -167,8 +167,7 @@ footer {
     margin: 10% auto;
 }
 
-#backbutton,
-#nextbuttom {
+#backbutton,#nextbuttom {
     width: 50px;
     cursor: pointer;
     margin: 40px;

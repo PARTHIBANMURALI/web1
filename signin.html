@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account Form</title>
-    <link rel="stylesheet" type="text/css" href="signin.css">
+    <link rel="stylesheet" type="text/css" href="signin.css"> 
 </head>
+
 <body>
     <div class="container">
         <h2>Create Account</h2>
-        <form id="createAccountForm">
+        <form id="createAccountForm" action="#">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -48,10 +50,18 @@
             const password = form.password.value;
             const confirmPassword = form.confirmPassword.value;
 
-            if (password !== confirmPassword) {
-                showError('Passwords do not match.');
+            if (!validateName(name)) {
+                showError('Invalid name. Please enter a valid name.');
+            } else if (!validateEmail(email)) {
+                showError('Invalid email. Please enter a valid email address.');
+            } else if (!validatePhone(phone)) {
+                showError('Invalid phone number. Please enter a valid phone number.');
+            } else if (!validatePassword(password)) {
+                showError('Invalid password. Password must be at least 6 characters long and contain at least one uppercase letter, one lowercase letter, and one number.');
+            } else if (password !== confirmPassword) {
+                alert('Passwords do not match.');
             } else {
-                showSuccess('Account created successfully!');
+                redirectToAnotherPage();
             }
         });
 
@@ -59,10 +69,31 @@
             errorDiv.textContent = message;
             successDiv.textContent = '';
         }
-
         function showSuccess(message) {
             successDiv.textContent = message;
             errorDiv.textContent = '';
+        }
+        function redirectToAnotherPage() {
+            window.location.href = 'index.html';
+        }
+        function validateName(name) {
+            const nameRegex = /^[A-Za-z\s]+$/;
+            return nameRegex.test(name);
+        }
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validatePhone(phone) {
+            const phoneRegex = /^\d{10}$/;
+            return phoneRegex.test(phone);
+        }
+
+        function validatePassword(password) {
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+            return passwordRegex.test(password);
         }
     </script>
 </body>

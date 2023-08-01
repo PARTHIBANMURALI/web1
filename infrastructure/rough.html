@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Nunito);
+
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            perspective: 1px;
+            transform-style: preserve-3d;
+            height: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            font-family: Nunito;
+        }
+
+        h1 {
+            font-size: 250%
+        }
+        h4{
+            font-size: 150%
+        }
+        p {
+            font-size: 140%;
+            line-height: 150%;
+            color: #333;
+        }
+
+        .slide {
+            position: relative;
+            padding: 25vh 10%;
+            min-height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+            transform-style: inherit;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            width: 320px;
+            height: 240px;
+            transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(240, 230, 220, .7);
+            box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+        }
+
+        img:last-of-type {
+            transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+        }
+
+        .slide:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+        }
+
+        .title {
+            width: 50%;
+            padding: 5%;
+            border-radius: 5px;
+            background: rgba(240, 230, 220, .7);
+            box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+        }
+
+        .slide:nth-child(2n) .title {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .slide:nth-child(2n+1) .title {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .slide,
+        .slide:before {
+            background: 50% 50% / cover;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 175%;
+            color: #fff;
+            text-shadow: 0 2px 2px #000;
+        }
+
+        #title {
+            background-image: url("day-view-royal-palace.jpg");
+            z-index: 2;
+        }
+
+        #title h1 {
+            transform: translateZ(.25px) scale(.75);
+            transform-origin: 50% 100%;
+
+        }
+
+        #slide1:before {
+            background-image: url("4.jpg");
+            transform: translateZ(-1px) scale(2);
+        }
+
+        #slide2 {
+            background-image: url("ev.jpg");
+            z-index: 2;
+        }
+
+        #slide3:before {
+            background-image: url("graduate-students-wearing-cap-gown.jpg");
+            transform: translateZ(-1px) scale(2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title" class="slide header">
+        <h1>OUR SCHOOL INFRASTRUCTURE</h1>
+        <h1 style="font-size: 23px;">
+            <div style="justify-content: left;font-style: oblique;" class="tabs">
+                <a href="https://chat.openai.com/">Home</a>&nbsp;&nbsp;
+                <a href="#">About</a>&nbsp;&nbsp;&nbsp;
+                <a href="#">Services</a>&nbsp;&nbsp;&nbsp;
+                <a href="#">Contact</a>
+            </div>
+        </h1>
+    </div>
+    <div id="slide1" class="slide">
+        <div class="title">
+            <h1>Academic Excellence</h1>
+            <p>
+                Our school curriculum is designed to challenge and inspire students to achieve
+                academic excellence.We have dedicated and experienced teachers who provide personalized attention to
+                each student,
+                ensuring their academic success.We believe in the holistic development of students, and hence, we offer
+                a wide range of
+                co-curricular activities. From sports, music, arts, and drama to debates, quizzes, and clubs, students
+                have ample opportunities to explore their interests
+                and talents beyond academics.
+            </p>
+        </div>
+    </div>
+    <div id="slide2" class="slide">
+        <div class="title">
+            <h1>EVENTS!</h1>
+            <p>
+                At Gowtham Schools, we take pride in organizing a diverse range of events throughout the academic
+                year to provide our students with a holistic and enriching experience. These events not only promote
+                academic excellence but also
+                foster creativity, teamwork, and social skills. Here are some of the exciting events happening in our
+                school It
+                includes various track and field events, team sports, and friendly competitions, promoting a spirit of
+                healthy competition and physical.
+            </p>
+        </div>
+        <img src="gra.jpg" alt="">
+        <img src="mo.jpg">
+    </div>
+    <div id="slide3" class="slide">
+        <div class="title">
+            <h1>AUDITORIUM</h1>
+            <p>
+                Our school hosts an exhilarating Annual Sports Day, where students from all grades come together to
+                showcase their athletic talents and team spirit.
+                The day is filled with various track and field events, including sprints, relay races, long jumps, and
+                high jumps. Students compete in a friendly and competitive atmosphere, cheered on by their peers and
+                teachers.
+                The event aims to promote physical fitness, sportsmanship, and healthy competition among students.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
