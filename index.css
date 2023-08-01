@@ -170,11 +170,11 @@ footer {
 #backbutton,
 #nextbuttom {
     width: 50px;
-    cursor: pointer;s
+    cursor: pointer;
     margin: 40px;
 }
 
-.infra img:hover {
+.infra div img:hover {
     filter: grayscale(0);
     cursor: pointer;
     transform: scale(1, 1);

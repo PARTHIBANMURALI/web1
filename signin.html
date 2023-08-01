@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account Form</title>
+    <link rel="stylesheet" type="text/css" href="signin.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form id="createAccountForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <div class="error-message" id="error"></div>
+            <div class="success-message" id="success"></div>
+            <button type="submit" class="create-account-btn">Create Account</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('createAccountForm');
+        const errorDiv = document.getElementById('error');
+        const successDiv = document.getElementById('success');
+
+        form.addEventListener('submit', function (e) {
+            const name = form.name.value;
+            const email = form.email.value;
+            const phone = form.phone.value;
+            const password = form.password.value;
+            const confirmPassword = form.confirmPassword.value;
+
+            if (password !== confirmPassword) {
+                showError('Passwords do not match.');
+            } else {
+                showSuccess('Account created successfully!');
+            }
+        });
+
+        function showError(message) {
+            errorDiv.textContent = message;
+            successDiv.textContent = '';
+        }
+
+        function showSuccess(message) {
+            successDiv.textContent = message;
+            errorDiv.textContent = '';
+        }
+    </script>
+</body>
+</html>
