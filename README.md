@@ -1,9 +1,9 @@
 # School Portal
-##Introduction
+**Introduction**
 Welcome to the School Portal! This is a web application developed using HTML, CSS, and JavaScript to provide a user-friendly platform for students, 
 teachers, and administrators to access various school-related functionalities.
 
-'##Installation'
+**##Installation**
 
 +Clone the repository to your local machine.
 +Navigate to the project folder.
