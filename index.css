@@ -107,7 +107,7 @@ footer {
 
 .officials {
     display: flex;
-    background-color: #f2f2f2;
+    background-color: #f4edd1;
     justify-content: space-between;
     padding: 100px;
 }
